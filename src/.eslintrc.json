@@ -1,0 +1,18 @@
+{
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "react/jsx-boolean-value": ["error", "always"],
+    "react/jsx-closing-bracket-location": "warn",
+    "react/jsx-closing-tag-location": "warn",
+    "react/jsx-one-expression-per-line": ["warn", { "allow": "single-child" }],
+    "prettier/prettier": "warn"
+  }
+}
