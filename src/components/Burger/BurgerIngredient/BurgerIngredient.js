@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import classes from './BurgerIngredient.module.css'
+
+import BurgerIngredientTypes from '../../../enums/BurgerIngredientTypes'
 
 class BurgerIngredient extends Component {
   render() {
     let ingredient
 
     switch (this.props.type) {
-      case 'BreadTop':
+      case BurgerIngredientTypes.BreadTop:
         ingredient = (
           <div className={classes.BreadTop}>
             <div className={classes.Seeds1} />
@@ -15,20 +18,33 @@ class BurgerIngredient extends Component {
           </div>
         )
         break
-      case 'BreadBottom':
+      case BurgerIngredientTypes.BreadBottom:
         ingredient = <div className={classes.BreadBottom} />
         break
-      case 'Meat':
+      case BurgerIngredientTypes.Meat:
         ingredient = <div className={classes.Meat} />
         break
-      case 'Cheese':
+      case BurgerIngredientTypes.Cheese:
         ingredient = <div className={classes.Cheese} />
         break
-      case 'Bacon':
+      case BurgerIngredientTypes.Bacon:
         ingredient = <div className={classes.Bacon} />
         break
-      case 'Salad':
+      case BurgerIngredientTypes.Salad:
         ingredient = <div className={classes.Salad} />
+        break
+      case BurgerIngredientTypes.Tomato:
+        ingredient = <div className={classes.Tomato} />
+        break
+      case BurgerIngredientTypes.Pickle:
+        ingredient = (
+          <div className={classes['Pickle-wrapper']}>
+            <div className={classes.Pickle} />
+            <div className={classes.Pickle} />
+            <div className={classes.Pickle} />
+            <div className={classes.Pickle} />
+          </div>
+        )
         break
       default:
         ingredient = null
