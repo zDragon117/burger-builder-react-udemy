@@ -10,7 +10,7 @@ class BurgerIngredient extends Component {
     let ingredient
 
     switch (this.props.type) {
-      case BurgerIngredientTypes.BreadTop:
+      case BurgerIngredientTypes.BreadTop.type:
         ingredient = (
           <div className={classes.BreadTop}>
             <div className={classes.Seeds1} />
@@ -18,25 +18,25 @@ class BurgerIngredient extends Component {
           </div>
         )
         break
-      case BurgerIngredientTypes.BreadBottom:
+      case BurgerIngredientTypes.BreadBottom.type:
         ingredient = <div className={classes.BreadBottom} />
         break
-      case BurgerIngredientTypes.Meat:
+      case BurgerIngredientTypes.Meat.type:
         ingredient = <div className={classes.Meat} />
         break
-      case BurgerIngredientTypes.Cheese:
+      case BurgerIngredientTypes.Cheese.type:
         ingredient = <div className={classes.Cheese} />
         break
-      case BurgerIngredientTypes.Bacon:
+      case BurgerIngredientTypes.Bacon.type:
         ingredient = <div className={classes.Bacon} />
         break
-      case BurgerIngredientTypes.Salad:
+      case BurgerIngredientTypes.Salad.type:
         ingredient = <div className={classes.Salad} />
         break
-      case BurgerIngredientTypes.Tomato:
+      case BurgerIngredientTypes.Tomato.type:
         ingredient = <div className={classes.Tomato} />
         break
-      case BurgerIngredientTypes.Pickle:
+      case BurgerIngredientTypes.Pickle.type:
         ingredient = (
           <div className={classes['Pickle-wrapper']}>
             <div className={classes.Pickle} />
